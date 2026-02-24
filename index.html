@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Placement</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<body class=" bg-[#e7edf3] opacity-100 ">
+ <section class="tracher container max-w-[1110px] m-auto px-10 py-0">
+  <div class="p-10"><h1 class="font-bold text-2xl mb-4">Job Application Tracker</h1>
+    <div class="grid grid-cols-3 gap-5 " >
+      <div class="border-0 rounded-2xl bg-white p-4 text-left"><h3>Total</h3> <span id="total-jobs">0</span></div>
+      <div class="border-0 bg-white rounded-2xl p-4 text-left"><h3>Interview</h3><span id="interview-jobs">0</span></div>
+      <div class="border-0 bg-white rounded-2xl p-4 text-left"><h3>Rejected</h3><span id="rejected-jobs">0</span></div>
+</div>
+<div class="w-full h-0.5 bg-gray-300 my-6"></div>
+  </div>
+ </section>
+ <!-- avaiablejob section -->
+ <section class=" container max-w-[1110px] mx-auto mb-0 px-20 py-0 ">
+    <div  class=" grid grid-cols-2 justify-between gap-200">
+        <div class="pr-6 w-[200px] font-bold">Available Jobs</div>
+        <div class="font-bold"><h2>8 jobs</h2></div>
+    </div>
+    
+    <div class=" mt-5 gap-20">
+      <button onclick="toggle('btnAll')" id="btnAll" class="border-0 rounded bg-white px-10 py-2">All</button>
+      <button onclick="toggle('btnInterview')" id="btnInterview" class=" border-0 rounded bg-white px-10 py-2" >Interview</button>
+      <button onclick="toggle('btnRejected')" id="btnRejected" class=" border-0 rounded bg-white px-10 py-2">Rejected</button>
+    </div>
+     </section>
+<!-- filtered section start -->
+    <section id="filterJobSection" class="hidden">
+
+    </section>
+
+    <!-- card section -->
+    <section id="allCardSection" class="container max-w-[1110px] mx-auto px-20 py-0 mt-0">
+    <!-- card part -->
+    <div id="allCards" class="rounded grid grid-rows-8 gap-9">
+         <!-- part1 start-->
+       
+            <div id="card1" class=" mt-10 grid grid-cols-2 justify-between gap-200  bg-[#FFFFFF]" >
+                <!-- vag -->
+                <div id="mobileCompanyJobs" class="main1 space-y-6 text-left w-[1000px] pl-4 py-4">
+                    <h3 class=" cardMobile font-bold">Mobile First Corp</h3>
+                    <p class="card1P1">React Native Developer</p>
+                    <p>Remote <span> • Full-time </span><span>• $130,000</span><span>- </span><span>$175,000</span></p>
+                     <button class=" card1AppliedbBtn bg-sky-300 border-0 text-black px-3 py-2 font-bold rounded">NOT APPLIED</button>
+                     <p class="card1P2">Build cross-platform mobile applications using React Native.<span>Work on</span>products used by millions of users worldwide.</p>
+                     <div class=" card1Btn flex flex-2 gap-2">
+                        <button id="" class= " btnInterestedJobs bg-white rounded font-bold border-green-400 border-2 text-green-600 px-3 py-2">INTERVIEW</button>
+                        <button id="" class=" btnRejectedJobs border-2 border-red-500 font-bold bg-white  px-3 py-2 text-red-600">REJECTED</button>   
+                     </div>
+                </div>
+                <div class="deletdiv1 w-8 h-8 rounded-full border-2 mt-2 border-gray-100">
+                  <div class=" card1DeleteBtn bg-[#FFFFFF] opacity-30"><i class="fa-regular fa-trash-can "></i></div>  
+                </div>
+               <!-- vag -->   
+        </div>
+        <!-- part1 end -->
+         
+        <!-- part2 start-->
+       
+            <div id="card2" class="grid grid-cols-2 justify-between gap-200  bg-[#FFFFFF] " >
+                <!-- vag -->
+                <div class=" space-y-6 text-left w-[1000px] pl-4 py-4">
+                    <h3 class="font-bold">WebFlow Agency</h3>
+                    <p>Web Designer & Developer</p>
+                    <p>Los Angeles, CA
+ • 
+Part-time 
+•
+ $80,000 - $120,000 </p>
+                     <button class="bg-sky-300 border-0 text-black px-3 py-2 font-bold rounded">NOT APPLIED</button>
+                     <p class="">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends..</p>
+                     <div class=" flex flex-2 gap-2">
+                        <button id="btn" class="bg-white rounded font-bold border-green-400 border-2 text-green-600 px-3 py-2">INTERVIEW</button>
+                        <button class="border-2 border-red-500 font-bold bg-white  px-3 py-2 text-red-600">REJECTED</button>   
+                     </div>
+                </div>
+                <div class="deletdiv1 w-8 h-8 rounded-full border-2 mt-2 border-gray-100">
+                  <div class="bg-[#FFFFFF] opacity-30"><i class="fa-regular fa-trash-can "></i></div>  
+                </div>
+                </div>
+               <!-- vag -->  
+                 <!--part3 card3 end  -->
+                 <!-- part4 start-->
+       
+            <div id="card3" class="grid grid-cols-2 justify-between gap-200  bg-[#FFFFFF] " >
+                <!-- vag -->
+                <div class=" space-y-6 text-left w-[1000px] pl-4 py-4">
+                    <h3 class="font-bold">DataViz Solutions</h3>
+                    <p>Data Visualization Specialist</p>
+                    <p>Boston, MA 
+•
+ Full-time
+ •
+ $125,000 - $165,000</p>
+                     <button class="bg-sky-300 border-0 text-black px-3 py-2 font-bold rounded">NOT APPLIED</button>
+                     <p class="">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
+.</p>
+                     <div class=" flex flex-2 gap-2">
+                        <button id="btn" class="bg-white rounded font-bold border-green-400 border-2 text-green-600 px-3 py-2">INTERESTED</button>
+                        <button class="border-2 border-red-500 font-bold bg-white  px-3 py-2 text-red-600">NOT INTERESTED</button>   
+                     </div>
+                </div>
+                <div class="deletdiv1  w-8 h-8 rounded-full border-2 mt-2 border-gray-100">
+                  <div class="bg-[#FFFFFF] opacity-30"><i class="fa-regular fa-trash-can "></i></div>  
+                </div>
+                </div>
+               <!-- vag -->  
+                 <!--part3 card3 end  -->
+                 <!-- part4 start-->
+
+       
+            <div id="card4" class="grid grid-cols-2 justify-between gap-200  bg-[#FFFFFF] " >
+                <!-- vag -->
+                <div class=" space-y-6 text-left w-[1000px] pl-4 py-4">
+                    <h3 class="font-bold">CloudFirst Inc</h3>
+                    <p>Backend Developer</p>
+                    <p>Remote <span> • Full-time </span><span>• $130,000</span><span>- </span><span>$175,000</span></p>
+                     <button class="bg-sky-300 border-0 text-black px-3 py-2 font-bold rounded">NOT APPLIED</button>
+                     <p class="">Build cross-platform mobile applications using React Native.<span>Work on</span>products used by millions of users worldwide.</p>
+                     <div class=" flex flex-2 gap-2">
+                        <button id="btn" class="bg-white rounded font-bold border-green-400 border-2 text-green-600 px-3 py-2">INTERESTED</button>
+                        <button class="border-2 border-red-500 font-bold bg-white  px-3 py-2 text-red-600">NOT INTERESTED</button>   
+                     </div>
+                </div>
+                <div class=" deletdiv1 w-8 h-8 rounded-full border-2 mt-2 border-gray-100">
+                  <div class="bg-[#FFFFFF] opacity-30"><i class="fa-regular fa-trash-can "></i></div>  
+                </div>
+                </div>
+               <!-- vag -->  
+                 <!--part4 card4 end  -->
+                 <!-- part5 start-->
+       
+            <div id="card5" class="grid grid-cols-2 justify-between gap-200  bg-[#FFFFFF] " >
+                <!-- vag -->
+                <div class=" space-y-6 text-left w-[1000px] pl-4 py-4">
+                    <h3 class="font-bold">Innovation Labs</h3>
+                    <p>UI/UX Engineer</p>
+                    <p>Remote <span> • Full-time </span><span>• $130,000</span><span>- </span><span>$175,000</span></p>
+                     <button class="bg-sky-300 border-0 text-black px-3 py-2 font-bold rounded">NOT APPLIED</button>
+                     <p class="">Build cross-platform mobile applications using React Native.<span>Work on</span>products used by millions of users worldwide.</p>
+                     <div class=" flex flex-2 gap-2">
+                        <button id="btn" class="bg-white rounded font-bold border-green-400 border-2 text-green-600 px-3 py-2">INTERVIEW</button>
+                        <button class="border-2 border-red-500 font-bold bg-white  px-3 py-2 text-red-600">REJECTED</button>   
+                     </div>
+                </div>
+                <div class=" deletdiv1 w-8 h-8 rounded-full border-2 mt-2 border-gray-100">
+                  <div class="bg-[#FFFFFF] opacity-30"><i class="fa-regular fa-trash-can "></i></div>  
+                </div>
+                </div>
+               <!-- vag -->  
+                 <!--part5 card5 end  -->
+                 <!-- part6 start-->
+       
+            <div id="card6" class="grid grid-cols-2 justify-between gap-200  bg-[#FFFFFF] " >
+                <!-- vag -->
+                <div class=" space-y-6 text-left w-[1000px] pl-4 py-4">
+                    <h3 class="font-bold">MegaCorp Solutions</h3>
+                    <p>JavaScript Developer</p>
+                    <p>Remote <span> • Full-time </span><span>• $130,000</span><span>- </span><span>$175,000</span></p>
+                     <button class="bg-sky-300 border-0 text-black px-3 py-2 font-bold rounded">NOT APPLIED</button>
+                     <p class="">Build cross-platform mobile applications using React Native.<span>Work on</span>products used by millions of users worldwide.</p>
+                     <div class=" flex flex-2 gap-2">
+                        <button id="btn" class="bg-white rounded font-bold border-green-400 border-2 text-green-600 px-3 py-2">INTERVIEW</button>
+                        <button class="border-2 border-red-500 font-bold bg-white  px-3 py-2 text-red-600">REJECTED</button>   
+                     </div>
+                </div>
+                <div class="deletdiv1   w-8 h-8 rounded-full border-2 mt-2 border-gray-100">
+                  <div class="bg-[#FFFFFF] opacity-30"><i class="fa-regular fa-trash-can "></i></div>  
+                </div>
+                </div>
+               <!-- vag -->  
+                 <!--part6 card6 end  -->
+                 <!-- part7 start-->
+       
+            <div id="card7" class="grid grid-cols-2 justify-between gap-200  bg-[#FFFFFF] " >
+                <!-- vag -->
+                <div class=" space-y-6 text-left w-[1000px] pl-4 py-4">
+                    <h3 class="font-bold">StartupXYZ</h3>
+                    <p>Full Stack Engineer</p>
+                    <p>Remote <span> • Full-time </span><span>• $130,000</span><span>- </span><span>$175,000</span></p>
+                     <button class="bg-sky-300 border-0 text-black px-3 py-2 font-bold rounded">NOT APPLIED</button>
+                     <p class="">Build cross-platform mobile applications using React Native.<span>Work on</span>products used by millions of users worldwide.</p>
+                     <div class=" flex flex-2 gap-2">
+                        <button id="btn" class="bg-white rounded font-bold border-green-400 border-2 text-green-600 px-3 py-2">INTERVIEW</button>
+                        <button class="border-2 border-red-500 font-bold bg-white  px-3 py-2 text-red-600">REJECTED</button>   
+                     </div>
+                </div>
+                <div class="deletdiv1  w-8 h-8 rounded-full border-2 mt-2 border-gray-100">
+                  <div class="bg-[#FFFFFF] opacity-30"><i class="fa-regular fa-trash-can "></i></div>  
+                </div>
+                </div>
+               <!-- vag -->  
+                 <!--part7 card7 end  -->
+                 <!-- PART8 card8start -->
+                 <div id="card8" class="grid grid-cols-2 justify-between gap-200  bg-[#FFFFFF] " >
+                <!-- vag -->
+                <div class=" space-y-6 text-left w-[1000px] pl-4 py-4">
+                    <h3 class="font-bold">TechCorp Industries </h3>
+                    <p>Senior Frontend Developer</p>
+                    <p>Remote <span> • Full-time </span><span>• $130,000</span><span>- </span><span>$175,000</span></p>
+                     <button class="bg-sky-300 border-0 text-black px-3 py-2 font-bold rounded">NOT APPLIED</button>
+                     <p class="">Build cross-platform mobile applications using React Native.<span>Work on</span>products used by millions of users worldwide.</p>
+                     <div class=" flex flex-2 gap-2">
+                        <button id="btn" class="bg-white rounded font-bold border-green-400 border-2 text-green-600 px-3 py-2">INTERVIEW</button>
+                        <button class="border-2 border-red-500 font-bold bg-white  px-3 py-2 text-red-600">REJECTED</button>   
+                     </div>
+                </div>
+                <div class=" deletdiv1 w-8 h-8 rounded-full border-2 mt-2 border-gray-100">
+                  <div class="bg-[#FFFFFF] opacity-30"><i class="fa-regular fa-trash-can "></i></div>  
+                </div>
+                </div>
+      
+        </div>  
+ </section>
+
+
+
+
+
+
+
+
+
+
+
+     
+
+<script src="script.js/jobtracker.js"></script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+  
