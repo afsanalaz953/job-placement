@@ -4,7 +4,7 @@ Welcome to Job Placement, a fully functional career connection platform built us
 🚀 Live Demo
 Live Demo
 
-![Job Application Tracker Mockup](./assets/mockup.jpg)
+<img width="1423" height="752" alt="Image" src="https://github.com/user-attachments/assets/cbdd1396-279a-4b2e-85a9-966ed3310f1b" />
 
 
 
